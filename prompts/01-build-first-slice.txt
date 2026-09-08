@@ -1,0 +1,11 @@
+Read AGENTS.md, README.md, and every file in docs/ before editing. You are implementing the first local milestone of this medieval economy game.
+
+Inspect the folder and installed tools. Follow the proposed TypeScript/Next.js/PostgreSQL/Node-worker architecture unless there is a concrete compatibility issue. Preserve the documentation when scaffolding. Briefly state your implementation plan, then proceed through M1 without waiting for another confirmation on routine choices.
+
+Implement a real persisted local prototype: village resources, a finite shared workforce, two gathering activities, durable timed jobs, automatic completion by a worker, and an understandable browser interface. Use original simple placeholders. Keep provisional balance values configurable and documented. Make completion idempotent and prevent concurrent worker over-allocation. A browser countdown is display only.
+
+Provide local database setup with persistent storage, migrations, development seed data, .env.example with placeholders, .gitignore, locked dependencies, and documented npm scripts. The development identity must be explicitly local-only and must not be enabled in a public production deployment. No AI runtime dependency, real payments, crypto, world map, or public deployment.
+
+Use meaningful tests for M1 acceptance criteria, including real PostgreSQL integration coverage for races and restart/retry behavior where applicable. Use an injectable clock for timing tests. Run the available tests and production build, and inspect the browser if browser tools are available. If a dependency is missing, report the precise installation step; do not silently substitute an in-memory database or claim success.
+
+Update README with verified commands and docs/status.md with results. Finish with instructions for opening and trying the prototype, the checks actually run, remaining issues, and suggested next task. Complete M1 only.

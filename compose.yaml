@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:18.4
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: medieval
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: medieval_economy
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U medieval -d medieval_economy"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  postgres_data:

@@ -1,0 +1,5 @@
+Read AGENTS.md and the M1 acceptance criteria. Independently review the implementation and current diff. Do not rely on the implementation agent's summary.
+
+Check durable state, database transaction boundaries, authorization/local fixture restrictions, server-side time and reward validation, retry safety, concurrent allocation, overdue jobs after restart, and reproducible setup. Run relevant existing checks and identify missing evidence. Avoid unrelated refactoring or cosmetic nitpicks.
+
+Report actionable findings with severity, file references, reproduction or reasoning, and recommended fixes. State what you tested and what you could not verify. Do not modify code in this review. If you find no material issues, say so while listing residual limitations. The user will return findings to the implementation agent.
